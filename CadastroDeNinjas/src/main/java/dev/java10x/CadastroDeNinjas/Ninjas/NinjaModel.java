@@ -1,4 +1,4 @@
-package dev.java10x.CadastroDeNinjas;
+package dev.java10x.CadastroDeNinjas.Ninjas.Controller.Service;
 
 import jakarta.persistence.*;
 
