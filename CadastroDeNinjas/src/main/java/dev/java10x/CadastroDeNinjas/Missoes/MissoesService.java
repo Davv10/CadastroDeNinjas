@@ -32,6 +32,7 @@ public class MissoesService {
     // Deletar missao - tem que ser um metodo VOID
     public void deletarMissaoPorId(Long id) {
         missoesRepository.deleteById(id);
+
     }
 
 }
