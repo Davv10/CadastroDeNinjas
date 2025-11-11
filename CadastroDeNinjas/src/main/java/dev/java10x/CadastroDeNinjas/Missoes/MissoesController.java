@@ -32,9 +32,9 @@ public class MissoesController {
     }
 
     //  Alterar dados de missoes (UPDATE)
-    @PutMapping("/alterarID")
-    public String alterarMissao() {
-        return "Missão alterada com sucesso";
+    @PutMapping("/alterar/{id}")
+    public MissoesModel alterarMissoes(@PathVariable Long id, @RequestBody MissoesModel missoesAtualizado) {
+        return missoesService.atualizarMissoes(id, missoesAtualizado);
     }
 
     // Deletar Ninja (DELETE)
