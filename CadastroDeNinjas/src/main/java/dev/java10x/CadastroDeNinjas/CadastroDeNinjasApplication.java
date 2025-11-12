@@ -11,3 +11,5 @@ public class CadastroDeNinjasApplication {
 	}
 
 }
+
+// Ajustar endpoint de missoes
