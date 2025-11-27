@@ -8,7 +8,7 @@ import java.util.List;
 @RequestMapping("/ninjas")
 public class NinjaController {
 
-    private NinjaService ninjaService;
+    private final NinjaService ninjaService;
 
     public NinjaController(NinjaService ninjaService) {
         this.ninjaService = ninjaService;
@@ -34,9 +34,7 @@ public class NinjaController {
 
     @GetMapping("/listar/{id}")
     public ResponseEntity<?> listarNinjasPorId(@PathVariable Long id) {
-
         NinjaDTO ninja = ninjaService.listarNinjasPorId(id);
-
         if (ninja != null) {
             return ResponseEntity.ok(ninja);
         } else {
@@ -47,9 +45,7 @@ public class NinjaController {
 
     @PutMapping("/alterar/{id}")
     public ResponseEntity<?> alterarNinjaPorId(@PathVariable Long id, @RequestBody  NinjaDTO ninjaAtualizado) {
-
         NinjaDTO ninja = ninjaService.atualizarNinja(id, ninjaAtualizado);
-
         if (ninja != null) {
             return ResponseEntity.ok(ninja);
         } else {
